@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import GifGrid from "./components/GifGrid";
 
-export const GifExpertApp = () => {
+const GifExpertApp = ({ defaultCategories = [] }) => {
   //   const categories = ["One Punsh", "Samurai X", "Dragon Ball"];
-  const [categories, setCategories] = useState(["street fighter"]);
+  const [categories, setCategories] = useState(defaultCategories);
 
   return (
     <div>
@@ -19,3 +19,5 @@ export const GifExpertApp = () => {
     </div>
   );
 };
+
+export default GifExpertApp;
